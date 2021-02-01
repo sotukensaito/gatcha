@@ -1,0 +1,310 @@
+ol,ul{
+  list-style: none;
+}
+
+h1{
+  margin: 0;
+}
+
+body {
+  background-color: #f0ebeb;
+  margin:0px;
+}
+
+/* 表 */
+.TB {
+}
+
+.TB table{
+  border-collapse: collapse;
+  border: solid 2px orange;/*表全体を線で囲う*/
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.TB th {
+  color: #FF9800;/*文字色*/
+  background: #fff5e5;/*背景色*/
+}
+
+.TB th, .TB td {
+  border: dashed 1px orange;/**/
+  /*破線 1px オレンジ*/
+}
+/* Fin表 */
+
+/* カード */
+.name {
+  border-collapse: collapse;
+  background-color: #fff;
+  border: solid 10px orange;
+}
+
+.name th {
+  color: #FF9800;
+  background: #fff5e5;
+}
+
+.name td {
+  border: solid 1px orange;
+}
+/* Finカード */
+
+/* -----------------------目次 */
+.mkj-1 {
+  background: #fffbf4;
+  border-radius: 3px;
+  padding: 0;
+  border: solid 2px #f89174;
+  margin-bottom: 2em;
+}
+.mkj-1 h2 {
+  padding: 8px 12px;
+  margin: -1px;
+  background: #f89174;
+  border: none;
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+}
+.mkj-1 ol {
+  list-style: decimal;
+  font-weight: 700;
+  margin: 4px 5%;
+  padding: 0 0 0 20px;
+}
+.mkj-1 li {
+  font-size: .9em;
+  padding: 8px 0;
+}
+.mkj-1 a {
+  text-decoration: none;
+  color: #545454;
+  transition: color .3s;
+}
+
+.mkj-1 a:hover {
+  color: rgba(0, 0, 0, 0.3);
+}
+/* -------------------Fin目次 */
+
+/* タイトル2 */
+h2 {
+  text-align: center;
+  clear: both;
+  font-size: 24px;
+  margin-bottom: 0;
+}
+/* Finタイトル2 */
+
+/* ガチャ画像 */
+.base {
+  position: relative;
+}
+
+.naka {
+  
+  text-align: center;
+}
+
+.CA {
+  position: absolute;
+  top: 20%;
+  left: 34%;
+}
+
+.capsule {
+  text-align: center;
+}
+
+.CH {
+  position: absolute;
+  top: 15%;
+  left: 29%;
+}
+
+.chara {
+ 
+}
+
+.mawasu, .akeru, .toziru {
+  text-align: center;
+}
+
+.mawasu button, .akeru button, .toziru button {
+  width: 300px;
+  height: 100px;
+  top: 74%;
+  left: 33%;
+  padding: 0px;
+}
+
+/* Finガチャ画像 */
+
+header {
+  background-color: #fff;
+  text-align: center;
+}
+
+.top-h1 {
+  padding: 13px 0px 4px;
+}
+
+.content {
+  padding: 15px 0px 0px;
+}
+
+.wrap {
+  width: 1140px;
+  width: 100%;
+  margin:0 auto;
+}
+
+.nav-ol {
+  padding: 0px;
+  margin: 0px;
+  font-size :1.2em;
+  font-weight: 700;
+  color: #9e9c9c;
+}
+
+.nav-li {
+  display: inline-block;
+  margin-left: 2px;
+}
+
+.main {
+  width: 100%;
+}
+
+.main-inner{
+  margin-right: 165px;
+  margin-left: 165px;
+}
+
+article {
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+header.post-header {
+border-radius: 10px;
+padding: 40px 64px 0px;
+}
+
+.post-title {
+  margin:4px 0px 4px;
+}
+
+.post-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.day-ul {
+  padding: 0;
+  margin:0px;
+}
+
+.day-li {
+  text-align: right;
+  color: #afafaf;
+  font-weight: 700;
+}
+
+.post-content {
+  padding:10px 64px 42px;
+}
+
+.side {
+  width: 290px;
+  float: left;
+  margin-left: -290px;
+}
+
+.side-height{
+  height: 1000px;
+  /* padding: 0px; */
+}
+
+.categories {
+  margin-bottom: 30px;
+}
+
+.side-widget-inner{
+  background-color: #fff;
+}
+
+.side-title{
+  margin: 0;
+  padding: 7px 10px;
+  background: #f89174;
+  color: #fff;
+}
+
+/* サイド目次 */
+
+.mkj {
+  max-height: 200px;
+  overflow-y: auto;
+  background: #fffbf4;
+}
+
+webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 5px;
+}
+
+
+.mokuzi-title {
+  text-align: center;
+  background: #fcd69e;
+  color: #555;
+  font-weight: 700;
+  padding: 10px;
+  margin: 0;
+  font-size: 17px;
+  vertical-align: middle;
+}
+
+.mkj ol {
+  list-style: decimal;
+  font-weight: 700;
+  margin: 4px 5%;
+}
+
+.mkj a {
+  color: #545454;
+  text-decoration: none;
+  transition: color .3s;;
+}
+
+.mkj a:hover {
+  color: rgba(0, 0, 0, 0.3);
+}
+/* Finサイド目次 */
+
+
+footer.last {
+  clear: left;
+}
+
+.hm {
+  text-align: center;
+  padding: 5px 0px;
+}
+
+.last .hm a {
+  font-size :1.2em;
+  font-weight: 700;
+  text-decoration: none;
+  color: #807171;
+}
+
+.copyright {
+  background-color: #fff;
+  text-align: center;
+  padding: 15px 0px;
+}

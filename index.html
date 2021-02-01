@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta class="utf-8">
+    <link rel="stylesheet" href="img/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>コンテンツ１(ガチャ)</title>
+
+    <!-- JSボタン -->
+    <!-- ガチャボタン -->
+    <script type="text/javascript">
+      var rand;
+      var randImg;
+      $(document).ready(function () {
+        $(".mawasu button").on('click', function () {
+          rand = Math.floor(Math.random() * 100);
+          randImg = 'img/capsule_red.jpg';
+	        if (rand < 10) randImg = 'img/capsule_yellow.jpg';
+          $('.capsule').attr('src', randImg);
+          $('.capsule').show();
+          $('.mawasu button').hide();
+          $('.akeru button').show();
+        });
+      })
+    </script>
+    <!-- Finガチャボタン -->
+
+    <!-- カプセルボタン -->
+    <script type="text/javascript">
+      
+      var imagesRED= [
+        'img/Rare1/イヌ.jpg',
+        'img/Rare1/イノシシ.jpg',
+        'img/Rare1/ウサギ.jpg',
+        'img/Rare1/ウシ.jpg',
+        'img/Rare1/ウマ.jpg',
+        'img/Rare1/サル.jpg',
+        'img/Rare1/トラ.jpg',
+        'img/Rare1/トリ.jpg',
+        'img/Rare1/ネコ.jpg',
+        'img/Rare1/ネズミ.jpg',
+        'img/Rare1/ヒツジ.jpg',
+        'img/Rare1/ヘビ.jpg',
+        'img/Rare1/リュウ.jpg'
+      ];
+
+        // '戌',
+        // '亥',
+        // '卯',
+        // '丑',
+        // '午',
+        // '申',
+        // '寅',
+        // '酉',
+        // '猫',
+        // '子',
+        // '未',
+        // '巳',
+        // '辰',
+      // var REA=[
+      //   '★',
+      //   '★★',
+      //   '★★★'
+      // ]
+      var REA
+      var NAMES;
+      var randImg2;
+      $(document).ready(function () {
+        $(".akeru button").on('click', function () {
+          switch (randImg){
+            case 'img/capsule_red.jpg':
+              randImg2 = imagesRED[Math.floor(Math.random() * imagesRED.length)];
+              switch(imagesRED){
+                case '0':
+                  NAMES='戌', REA='★'
+                break;
+              }
+              break;
+            case 'img/capsule_yellow.jpg':
+              rand = Math.floor(Math.random() * 100);
+              randImg2 = 'img/Rare2/アメミット.jpg';
+	            if (rand < 77.5) randImg2 = 'img/Rare2/スレイプニル.jpg';
+	            if (rand < 55) randImg2 = 'img/Rare2/獅子舞.jpg';
+	            if (rand < 32.5) randImg2 = 'img/Rare2/鳥人.jpg';
+	            if (rand < 10) randImg2 = 'img/Rare2/寿.jpg';
+              break;
+          }
+          $('.NAME').attr('class',NAMES);
+          $('.chara').attr('src', randImg2);
+          $('.name').show();
+          $('.akeru button').hide();
+          $('.toziru button').show();
+        });
+      })
+    </script>
+    <!-- Finカプセルボタン -->
+    
+    <!-- リセットボタン -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".toziru button").on('click', function () {
+          $('.toziru button').hide();
+          $('.mawasu button').show();
+          $('.capsule').hide();
+          $('.name').hide();
+        });
+      })
+    </script>
+    <!-- Finリセットボタン -->
+      <!-- FinJSボタン -->
+
+  </head>
+  <body>
+       <!-- header -->
+       <header>
+        <h1 class="top-h1" id="click">卒研要</h1>
+      </header>
+      <!-- content -->
+      <div class="content">
+        <div class="wrap">
+          <nav>
+            <ol class="nav-ol">
+              <li class="nav-li">ホーム ></li>
+              <li class="nav-li">ガチャ</li>
+            </ol>
+          </nav>
+          <div class="main">
+            <div class="main-inner">
+              <article>
+                <header class="post-header">
+                  <h1 class="post-title">
+                    干支ガチャ
+                  </h1>
+                  <ul class="day-ul">
+                    <li class="day-li">更新日：2021/1/30</li>
+                  </ul>
+                </header>
+                  <div class="post-content" >
+                    
+                    <!-- 画像たち -->
+                    <div class="base">
+                      <div class="naka">
+                        <img src="img/gachagacha.jpg" width="500px" height="550px">
+                      </div>
+                      <div class="CA">
+                        <img class="capsule" width="300" height="300" style="display: none;">
+                      </div>
+                      <div class="CH">
+                        <table class="name" style="display: none;">
+                          <tr>
+                            <td>名前：<span class="NAME"></span></td><td>レア度：<span class="REA"></span></td>
+                          </tr>
+                          <tr><td colspan="2"><img class="chara" width="360" height="360" ></td></tr>
+                        </table>
+                      </div>
+                    </div>
+                        <!-- ボタン -->
+                        <div class="mawasu">
+                            <button type="button">回す</button>
+                        </div>
+                        <div class="akeru">
+                            <button type="button" style="display: none;">開ける</button>
+                        </div>
+                        <div class="toziru">
+                            <button type="button" style="display: none;">閉じる</button>
+                        </div>
+                      <!-- Finボタン -->
+                    
+                    <!-- Fin画像たち -->
+                    
+                    <!-- 説明 -->
+                    <div class="TB">
+                      <table class="TABLE">
+                          <tr><th colspan="4">説明</th><!--th消す--></tr>
+                          <tr><th>カプセルの色</th><th>レア度</th><th>確率</th><th>数</th></tr>
+                          <tr><td><img src="img/capsule_red.jpg" width="50px" height="50px"></td><td>★</td><td>90%</td><td>13匹</td></tr>
+                          <tr><td rowspan="2"><img src="img/capsule_yellow.jpg" width="50px" height="50px"></td><td>★★</td><td>9%</td><td>4匹</td></tr>
+                          <tr><!--<td>消</td>--><td>★★★</td><td>1%</td><td>1匹</td></tr>
+                      </table>
+                    </div>
+                      <!-- Fin説明 -->
+                  </div>
+              </article>
+            </div>
+          </div>
+          <!-- /main -->
+
+        </div>
+      </div>
+  
+      <!-- footer -->
+      <footer class="last">
+        <div class="hm">
+          <a href="#click">
+            トップページへ
+          </a>
+        </div>
+        <div class="copyright">
+          © Copyright 2021
+        </div>
+      </footer>
+
+  </body>
+</html>
